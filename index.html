@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+</head>
+  <body class="container my-5">
+
+   
+    
+        <div class="input-group">
+            <div class="input-group-prepend">
+                
+              <span class="input-group-text" id="">choose item </span>
+              <select class="custom-select" id="inputGroupSelect1">
+                <option selected>Choose...</option>
+                <option value="chips"> chips </option>
+                <option value="choclate">choclate </option>
+                <option value="soft drinks">soft drinks </option>
+              </select>
+            </div>
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id=""> Quantity  </span>
+                  <select class="custom-select" id="inputGroupSelect2">
+                    <option selected>Choose...</option>
+                    <option value="1"> 1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+      </div>
+      <input  id="btn1"  class="btn btn-primary" type="submit" value="Submit">
+      <table class="table" id="mytable">
+        <thead>
+          <tr>
+            <th scope="col">item </th>
+            <th scope="col"> Quantity  </th>
+           
+          </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+        
+      </table>
+      <script>
+    
+        $("#btn1").click(function(){
+            let selector1 = $("#inputGroupSelect1").val();
+            let selector2 = $("#inputGroupSelect2").val();
+    
+    
+           
+        
+            $('#tbody').append(`<tr>  <td>${selector1}  </td> <td>${selector2} </td>   </tr>`);
+    
+    
+          });
+        
+          
+        
+      
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
